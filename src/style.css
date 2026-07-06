@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+@theme {
+  /* ArusPay Brand Guideline V1.0 */
+  --color-cream: #FBF7EE;
+  --color-forest: #15231B;
+  --color-forest-2: #1D3327;
+  --color-moss: #4C7A50;
+  --color-moss-dark: #3A5F3E;
+  --color-leaf: #A3CB8B;
+  --color-leaf-light: #D6E9C6;
+  --color-gold: #DDA24F;
+  --color-gold-dark: #C78D3E;
+  --color-stone: #6E7566;
+  --color-line: #E4DCC8;
+
+  --font-display: 'Fraunces', ui-serif, Georgia, serif;
+  --font-sans: 'Urbanist', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-sans);
+  }
+}
+
+/* ── Scroll reveal ───────────────────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transition:
+    opacity var(--reveal-duration, 700ms) cubic-bezier(0.22, 1, 0.36, 1),
+    transform var(--reveal-duration, 700ms) cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform;
+}
+
+.reveal-fade-up    { transform: translateY(36px); }
+.reveal-fade-down  { transform: translateY(-24px); }
+.reveal-fade-left  { transform: translateX(-36px); }
+.reveal-fade-right { transform: translateX(36px); }
+.reveal-zoom-in    { transform: scale(0.94); }
+.reveal-fade       { transform: none; }
+
+.reveal.revealed {
+  opacity: 1;
+  transform: none;
+}
+
+/* ── Hero load animations ────────────────────────────────────── */
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes heroBgZoom {
+  from { transform: scale(1.06); }
+  to   { transform: scale(1); }
+}
+
+@keyframes navbarSlideDown {
+  from { opacity: 0; transform: translateY(-100%); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes subtleFloat {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-6px); }
+}
+
+.hero-animate {
+  animation: heroFadeUp 0.85s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.hero-animate-delay-1 { animation-delay: 0.12s; }
+.hero-animate-delay-2 { animation-delay: 0.24s; }
+.hero-animate-delay-3 { animation-delay: 0.36s; }
+.hero-animate-delay-4 { animation-delay: 0.5s; }
+.hero-animate-delay-5 { animation-delay: 0.62s; }
+
+.hero-bg-animate {
+  animation: heroBgZoom 1.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.navbar-animate {
+  animation: navbarSlideDown 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* ── Reduced motion ──────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .hero-animate,
+  .hero-bg-animate,
+  .navbar-animate {
+    animation: none;
+  }
+}
