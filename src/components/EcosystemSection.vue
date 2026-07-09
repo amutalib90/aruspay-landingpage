@@ -5,7 +5,7 @@
         <!-- Left: Ecosystem -->
         <div>
           <div v-reveal="'fade-up'">
-            <h2 class="font-display text-3xl font-medium text-forest mb-3">Our Ecosystem</h2>
+            <h2 class="font-sans text-3xl font-medium text-forest mb-3">Our Ecosystem</h2>
             <p class="text-stone mb-10 leading-relaxed">
               A future-ready payment infrastructure ecosystem designed to grow with businesses and power the digital economy across ASEAN.
             </p>
@@ -35,7 +35,7 @@
         <!-- Right: Part of a Stronger Group -->
         <div>
           <div v-reveal="{ animation: 'fade-up', delay: 100 }">
-            <h2 class="font-display text-3xl font-medium text-forest mb-3">Part of a Stronger Group</h2>
+            <h2 class="font-sans text-3xl font-medium text-forest mb-3">Part of a Stronger Group</h2>
             <p class="text-stone mb-10 leading-relaxed">
               ArusPay operates under SMRT Holdings — a group committed to building Malaysia's digital financial future.
             </p>

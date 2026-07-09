@@ -13,7 +13,7 @@
             </svg>
           </div>
           <div>
-            <h3 class="font-display text-moss font-medium text-lg mb-2">Our Mission</h3>
+            <h3 class="font-sans text-moss font-medium text-lg mb-2">Our Mission</h3>
             <p class="text-stone text-sm leading-relaxed">
               To simplify and accelerate digital payments across Southeast Asia through secure, scalable, and intelligent financial infrastructure.
             </p>
@@ -32,7 +32,7 @@
             </svg>
           </div>
           <div>
-            <h3 class="font-display text-moss font-medium text-lg mb-2">Our Vision</h3>
+            <h3 class="font-sans text-moss font-medium text-lg mb-2">Our Vision</h3>
             <p class="text-stone text-sm leading-relaxed">
               To become Southeast Asia's most trusted payment infrastructure platform, enabling businesses of all sizes to participate in a connected digital economy.
             </p>

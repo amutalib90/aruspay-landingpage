@@ -14,8 +14,10 @@
   --color-stone: #6E7566;
   --color-line: #E4DCC8;
 
-  --font-display: 'Fraunces', ui-serif, Georgia, serif;
+  /* Primary UI typeface: Urbanist. Serif accent: Fraunces. Buttons: Inter. */
   --font-sans: 'Urbanist', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-serif: 'Fraunces', 'Iowan Old Style', Georgia, 'Times New Roman', serif;
+  --font-button: 'Inter', var(--font-sans);
 }
 
 @layer base {
@@ -26,6 +28,11 @@
   body {
     font-family: var(--font-sans);
   }
+}
+
+@utility font-button {
+  font-family: var(--font-button);
+  font-weight: 600;
 }
 
 /* ── Scroll reveal ───────────────────────────────────────────── */
@@ -71,6 +78,42 @@
   50%       { transform: translateY(-6px); }
 }
 
+@keyframes navGlowSpin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes navGlowPulse {
+  0%, 100% { opacity: 0.55; }
+  50%      { opacity: 1; }
+}
+
+@keyframes floatCard {
+  0%, 100% { transform: translateY(0) rotate(-6deg); }
+  50% { transform: translateY(-10px) rotate(-4deg); }
+}
+
+@keyframes rippleRing {
+  0% {
+    opacity: 0.75;
+    transform: scale(0.35);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.55);
+  }
+}
+
+@keyframes tapPulse {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes coinFloat {
+  0%, 100% { transform: translateY(0); opacity: 0.95; }
+  50% { transform: translateY(-10px); opacity: 0.65; }
+}
+
 .hero-animate {
   animation: heroFadeUp 0.85s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
@@ -89,6 +132,28 @@
   animation: navbarSlideDown 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
+.anim-float {
+  animation: floatCard 4.8s ease-in-out infinite;
+}
+
+.anim-ripple {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: rippleRing 2.4s ease-out infinite;
+}
+
+.anim-tap {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: tapPulse 2.1s ease-in-out infinite;
+}
+
+.anim-coin {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: coinFloat 2.8s ease-in-out infinite;
+}
+
 /* ── Reduced motion ──────────────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
   .reveal {
@@ -99,7 +164,13 @@
 
   .hero-animate,
   .hero-bg-animate,
-  .navbar-animate {
+  .navbar-animate,
+  .anim-float,
+  .anim-ripple,
+  .anim-tap,
+  .anim-coin,
+  .nav-glow-ring::before,
+  .nav-glow-ring::after {
     animation: none;
   }
 }

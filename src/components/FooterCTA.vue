@@ -15,7 +15,7 @@
               </svg>
             </div>
             <div>
-              <h2 class="font-display text-2xl lg:text-3xl font-medium text-white">Let's Build the Future of Payments, Together</h2>
+              <h2 class="font-sans text-2xl lg:text-3xl font-medium text-white">Let's Build the Future of Payments, Together</h2>
               <p class="text-white/50 mt-1.5 text-sm">Connect with our team to explore how ArusPay can power your business growth.</p>
             </div>
           </div>

@@ -10,7 +10,7 @@
               <span class="text-4xl font-black text-forest">Arus</span>
               <span class="text-4xl font-black text-moss">Pay</span>
             </div>
-            <h2 class="font-display text-2xl font-medium text-forest mb-4">Unified. Intelligent. Limitless.</h2>
+            <h2 class="font-sans text-2xl font-medium text-forest mb-4">Unified. Intelligent. Limitless.</h2>
             <p class="text-stone leading-relaxed">
               ArusPay is a unified payment orchestration and gateway platform that enables businesses to accept, manage, and optimize digital payments across multiple channels and markets.
             </p>

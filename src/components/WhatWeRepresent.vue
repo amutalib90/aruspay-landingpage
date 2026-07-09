@@ -2,7 +2,7 @@
   <section class="bg-leaf-light py-24">
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
       <div v-reveal="'fade-up'" class="text-center mb-14">
-        <h2 class="font-display text-3xl lg:text-4xl font-medium text-forest">What ArusPay Represents</h2>
+        <h2 class="font-sans text-3xl lg:text-4xl font-medium text-forest">What ArusPay Represents</h2>
       </div>
 
       <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
